@@ -50,14 +50,14 @@
         default_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //│  A       │  Z       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+           &kp FR_A    &kp FR_Z    &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp A     HRML(S,         D,         F)     &kp G          &kp H      HRMR(J,        K,           L)   &kp BSPC
+        //│  Q       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │    M     │
+           &kp FR_Q     HRML(S,         D,         F)     &kp G          &kp H      HRMR(J,    K,         L)       &kp FR_M
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
+        //│  W       │  X       │  C       │  V       │  B       │   │  N       │  ,       │ , <      │ . >      │ ENTER    │
+           &kp FR_W     &kp X      &kp C      &kp V      &kp B          &kp N    &kp FR_COMM &kp FR_SCLN &kp FR_COLN &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    &none    &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB   &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -67,14 +67,14 @@
         windows_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
-            &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
+        //│  A       │  Z       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
+            &kp FR_A    &kp FR_Z    &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp A    WHRML(S,         D,         F)     &kp G          &kp H      WHRMR(J,        K,         L)   &kp BSPC
+        //│  Q       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │     M    │
+            &kp FR_Q    WHRML(S,     D,         F)      &kp G          &kp H      WHRMR(J,       K,         L)     &kp FR_M
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
+        //│  W       │  X       │  C       │  V       │  B       │   │  N       │  , ?     │ . ;      │ : /      │ ENTER    │
+            &kp FR_W   &kp X      &kp C      &kp V      &kp B          &kp N     &kp FR_COMM &kp FR_SCLN  &kp FR_COLN    &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                    &none    &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB   &none
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
