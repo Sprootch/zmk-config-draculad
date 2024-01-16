@@ -88,7 +88,7 @@
             bindings = <
 &none &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &none
 &none &trans    &trans  &trans    &trans    &trans       &kp LARW   &kp DARW   &kp UARW         &kp RARW  &trans    &none
-&none &trans    &trans  &trans    &trans    &trans       &kp HOME   &kp PD_DN  &kp PG_UP        &kp END   &trans    &none
+&none &trans    &trans  &trans    &trans    &trans       &kp HOME   &kp PG_DN  &kp PG_UP        &kp END   &trans    &none
                              &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
