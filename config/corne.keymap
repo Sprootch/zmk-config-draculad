@@ -12,10 +12,8 @@
 #include "keymap_french.h"
 
 // Home row mods macro
-#define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
-#define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
-#define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
+#define HRML(k2,k3,k4) &ht LGUI k2  &ht LCTRL k3  &ht LALT k4
+#define HRMR(k1,k2,k3) &ht RCTRL k1  &ht RALT k2  &ht RGUI k3
 
 // Layers
 #define DEFAULT 0
@@ -57,7 +55,7 @@
 
             bindings = <
 &none &kp FR_A  &kp FR_Z  &kp E     &kp R  &kp T        &kp Y    &kp U      &kp I       &kp O         &kp P     &none
-&none &kp FR_Q  &kp S     &kp D     &kp F  &kp G        &kp H    &kp J      &kp K       &kp L         &kp FR_M     &none
+&none HRML(FR_Q, FR_S, FR_D)        &kp F  &kp G        &kp H    &kp J      HRMR(FR_K, FR_L, FR_M)              &none
 &none &kp FR_W  &kp X     &kp C     &kp V  &kp B        &kp N    &kp FR_COMM  &kp FR_SCLN  &kp FR_COLN  &kp FR_QUOT  &none
                       &kp ESC  &lt LEF SPACE &kp TAB     &kp RET  &lt RIG BACKSPACE &kp RSHIFT
             >;
