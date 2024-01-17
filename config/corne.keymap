@@ -109,7 +109,7 @@
 		bindings = <
 		&none &kp ESC  &trans &trans  &trans  &kp INSERT                    &kp BSPC  &kp HOME &kp UP &kp END &kp PSCRN &none 
 		&none &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &none    			&kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
-		&none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V)   &kp TAB            &kp HOME &kp PG_DN &kp PG_UP &kp END  &LC(BSPC) &none
+		&none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V)   &kp TAB            &kp HOME &kp PG_DN &kp PG_UP &kp END  &kp LC(BSPC) &none
 					                        &none &trans &none          &kp ENTER  &none &none
 		>;
 		};
