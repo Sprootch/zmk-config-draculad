@@ -17,9 +17,10 @@
     #define SYM 1
     #define EXT 2
     #define FNC 3
-    #define SYM2 4
-    #define ACCENT 5
-	#define SETTINGS 6
+    #define NUM 4
+    #define SYM2 5
+    #define ACCENT 6
+	#define SETTINGS 7
 // -----------------
 
 &mt {
@@ -43,28 +44,43 @@
 						= <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 				};
 		};
+        
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        fnc_layer {
+            if-layers = <SYM EXT>;
+            then-layer = <FNC>;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
-				// both right thumb keys
+		// both right thumb keys
         combo_accent {
             timeout-ms = <300>;
-            key-positions = <32 33>;
+            key-positions = <39 41>;
             bindings = <&mo ACCENT>;
         };
+        // TODO:
+        //combo_esc {
+         //           timeout-ms = <50>;
+          //          key-positions = <0 1>;
+           //         bindings = <&kp ESC>;
+            //    };
 				// internal-left & external-right thumb keys
-				combo_sym2 {
-						timeout-ms = <200>;
-						key-positions = <31 33>;
-						bindings = <&mo SYM2>;
-				};
+				//combo_sym2 {
+				//		timeout-ms = <200>;
+				//		key-positions = <31 33>;
+				//		bindings = <&mo SYM2>;
+				//};
 				// both left thumb keys
-				combo_settings {
-						timeout-ms = <300>;
-						key-positions = <30 31>;
-						bindings = <&mo SETTINGS>;
-				};
+				//combo_settings {
+				//		timeout-ms = <300>;
+				//		key-positions = <30 31>;
+				//		bindings = <&mo SETTINGS>;
+				//};
     };
+// Combos were here !
 
     keymap {
             compatible = "zmk,keymap";
@@ -72,50 +88,59 @@
         // Base alpha layer
        		default_layer {
 		bindings = <
-		&none &kp FR_A &kp FR_Z &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P &none	
+		&none &kp FR_A &kp FR_Z &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P &none	
 		&none &kp FR_Q &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp FR_M   &none	
 		&none &kp FR_W &kp X &kp C &kp V &kp B           &kp N &kp FR_COMM  &kp FR_SCLN &kp FR_COLN &kp FR_QUOT &none
              &none &mo EXT &mt LSHIFT SPACE           &kp SPACE &sl SYM &none
 		>;
 		};
 
-        // Numbers and high frequency symbols
        		sym_layer {
 		bindings = <
-		&none &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_4 &kp FR_5		                                    &kp FR_6 &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_0 &none
-		&none &kp IT_LESS &kp IT_USD &kp IT_LPAR &kp IT_LBRC &kp IT_LBKT  &kp IT_EQL &kp IT_QUES &kp IT_SQUOT &kp IT_MINUS &kp IT_AST &none
-		&none &kp IT_GREAT &kp IT_PERC &kp IT_RPAR &kp IT_RBRC &kp IT_RBKT 	&kp IT_AT &kp IT_EXCL &kp IT_DQUOT &kp IT_PLUS &kp IT_FSLH &none
-					                                   &none  &mo FNC  &mo SYM2       &trans &trans &none
+		&none &kp FR_EXLM &kp FR_AT &kp FR_HASH &kp FR_DLR &kp FR_PERC		            &kp FR_EQL  &kp FR_GRV  &kp FR_COLN &kp FR_SCLN &kp FR_PLUS &none
+		&none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp FR_CIRC                        &kp FR_ASTR &kp FR_LPRN &kp FR_LCBR &kp FR_LBRC &kp FR_MINS &none
+		&none &none &none &kp FR_BSLS &kp FR_PIPE &kp FR_AMPR 	                        &kp FR_TILD &kp FR_RPRN &kp FR_RCBR &kp FR_RBRC &kp FR_UNDS &none
+					                                   &none  &none &none       &trans &trans &none
 		>;
 		};
 
         // Main modifiers and arrow keys
 		    ext_layer {
 		bindings = <
-		&none &kp ESC  &trans &trans  &trans  &trans    			        &kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS &none 
-		&none &sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 			&kp PG_DN &kp LEFT  &kp DOWN  &kp RIGHT   &kp DEL &none
-		&none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans &none
-					                        &none &trans &kp LCTRL    &kp ENTER  &mo FNC &none
+		&none &kp ESC  &trans &trans  &trans  &INSERT    			        &kp BSPC  &kp HOME &kp UP &kp END &kp PSCRN &none 
+		&none &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &none    			&kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
+		&none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V)   &kp TAB            &kp HOME &kp PG_DN &kp PG_UP &kp END  &LC(BSPC) &none
+					                        &none &trans &none          &kp ENTER  &none &none
 		>;
 		};
 
         // Function keys with modifiers
        		fnc_layer {
 		bindings = <
-		&none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &none
-		&none &sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans &none
-		&none &none &none &none &none &none				          &none &none &none &none &none &none
+		&none &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F12 &kp F7 &kp F8 &kp F9 &none &none
+		&none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &none        &kp F11 &kp F4 &kp F5 &kp F6 &none &none
+		&none &none &none &none &none &none				          &kp F10 &kp F1 &kp F2 &kp F3 &none &none
           				           &none &none &none              &none &none  &none
 		>;
 		};
 
+        // num layer
+       		num_layer {
+		bindings = <
+		&none &none &none &none &none &none                         &kp FR_EQL &kp FR_7 &kp FR_8 &kp FR_9 &kp FR_PLUS  &none
+		&none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &none          &kp FR_ASTR &kp FR_4 &kp FR_5 &kp FR_6 &kp FR_MINS &none
+		&none &none &none &none &none &none                         &kp FR_0 &kp FR_1 &kp FR_2 &kp FR_3 &kp FR_SLSH &none
+          				     &none &none &none                         &none &none &none
+		>;
+		};
+		
         // Low frequency symbols.
        		symbols_2_layer {
 		bindings = <
 		&none &kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none &none
 		&none &kp IT_BKTK &kp IT_TILDE &kp IT_BSLH &kp IT_PIPE &kp IT_AND         &none &none &none &none &none &none
-		&none &none 			&none 			 &kp IT_SECT &kp IT_CCED &kp IT_DEG				  &none &none &none &none &none &none
-          				           										&none &none &none        	&none &none &none
+		&none &none &none 	&kp IT_SECT &kp IT_CCED &kp IT_DEG		              &none &none &none &none &none &none
+          				           			&none &none &none        	&none &none &none
 		>;
 		};
 
