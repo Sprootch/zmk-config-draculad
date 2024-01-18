@@ -45,7 +45,7 @@
 #define BE_L    L    // L
 #define BE_M    SEMI // M
 #define BE_UGRV SQT // ù
-#define BE_MICR LS(FR_ASTR) // µ
+#define BE_MICR LS(BE_ASTR) // µ
 #define BE_LABK STAR // <
 #define BE_W    Z    // W
 #define BE_X    X    // X
