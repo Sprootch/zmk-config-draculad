@@ -16,7 +16,9 @@
     #define SYM 1
     #define EXT 2
     #define FNC 3
-    #define NUM 4
+    #define SYM2 4
+    #define ACCENT 5
+    #define SETTINGS 6
 // -----------------
 
 &mt {
@@ -29,86 +31,118 @@
 };
 
 / {
-        macros {
-                // sometimes my device thinks a modifier is being held down
-                // pressing all modifiers fixes it.
-                unstick: unstick {
-                    label = "ZM_unstick";
-                    compatible = "zmk,behavior-macro";
-                    #binding-cells = <0>;
-                    bindings
-                        = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
-                };
+    macros {
+        // sometimes my device thinks a modifier is being held down
+        // pressing all modifiers fixes it.
+        unstick: unstick {
+            label = "ZM_unstick";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
+    };
         
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        fnc_layer {
-            if-layers = <SYM EXT>;
-            then-layer = <FNC>;
+    //conditional_layers {
+    //    compatible = "zmk,conditional-layers";
+    //    fnc_layer {
+    //        if-layers = <SYM EXT>;
+    //        then-layer = <FNC>;
+    //    };
+    //};
+    
+    combos {
+        compatible = "zmk,combos";
+        // both right thumb keys
+        combo_accent {
+            timeout-ms = <300>;
+            key-positions = <40 41>;
+            bindings = <&mo ACCENT>;
+        };
+        // internal-left & external-right thumb keys
+        combo_sym2 {
+              timeout-ms = <200>;
+              key-positions = <31 33>;
+              bindings = <&mo SYM2>;
+        };
+        // both left thumb keys
+        combo_settings {
+          timeout-ms = <300>;
+          key-positions = <38 39>;
+          bindings = <&mo SETTINGS>;
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-		// both right thumb keys
-        combo_accent {
-            timeout-ms = <300>;
-            key-positions = <39 41>;
-            bindings = <&mo NUM>;
-            };
-        };
-
     keymap {
-            compatible = "zmk,keymap";
+        compatible = "zmk,keymap";
 
         // Base alpha layer
-            default_layer {
-        bindings = <
-        &none &kp BE_A &kp BE_Z &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P &none 
-        &none &kp BE_Q &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp BE_M   &none  
-        &none &kp BE_W &kp X &kp C &kp V &kp B           &kp N &kp BE_COMM  &kp BE_SCLN &kp BE_COLN &kp BE_QUOT &none
-             &none &lt EXT ESC &mt LSHIFT SPACE           &kp ENTER &lt SYM BSPC &none
-        >;
+        default_layer {
+            bindings = <
+            &none &kp BE_A &kp BE_Z &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P &none 
+            &none &kp BE_Q &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp BE_M   &none  
+            &none &kp BE_W &kp X &kp C &kp V &kp B           &kp N &kp BE_COMM  &kp BE_SCLN &kp BE_COLN &kp BE_QUOT &none
+                 &none &mo EXT &mt LSHIFT SPACE           &kp SPACE &sl SYM &none
+            >;
         };
 
-            sym_layer {
-        bindings = <
-        &none &kp BE_EXLM &kp BE_AT &kp BE_HASH &kp BE_DLR &kp BE_PERC                  &kp BE_EQL  &kp BE_GRV  &kp BE_COLN &kp BE_SCLN &kp BE_PLUS &none
-        &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp BE_CIRC                        &kp BE_ASTR &kp BE_LPRN &kp BE_LCBR &kp BE_LBRC &kp BE_MINS &none
-        &none &none &none &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR                           &kp BE_TILD &kp BE_RPRN &kp BE_RCBR &kp BE_RBRC &kp BE_UNDS &none
-                                                       &none  &trans &trans       &trans &trans &none
-        >;
+        sym_layer {
+            bindings = <
+            &none &kp BE_EXLM &kp BE_AT &kp BE_HASH &kp BE_DLR &kp BE_PERC                  &kp BE_EQL  &kp BE_GRV  &kp BE_COLN &kp BE_SCLN &kp BE_PLUS &none
+            &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp BE_CIRC                        &kp BE_ASTR &kp BE_LPRN &kp BE_LCBR &kp BE_LBRC &kp BE_MINS &none
+            &none &none &none &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR                           &kp BE_TILD &kp BE_RPRN &kp BE_RCBR &kp BE_RBRC &kp BE_UNDS &none
+                                                           &none  &mo FNC &mo SYM2       &trans &trans &none
+            >;
         };
 
         // Main modifiers and arrow keys
-            ext_layer {
-        bindings = <
-        &none &kp ESC  &trans &trans  &trans  &kp INSERT                    &kp BSPC  &kp HOME &kp UP &kp END &kp PSCRN &none 
-        &none &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &none               &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
-        &none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB  &kp LC(V)             &kp HOME &kp PG_DN &kp PG_UP &kp END  &kp LC(BSPC) &none
-                                            &none &trans &trans          &kp ENTER  &trans &none
-        >;
+        ext_layer {
+            bindings = <
+            &none &kp ESC  &trans &trans  &trans  &kp INSERT                    &kp BSPC  &kp HOME &kp UP &kp END &kp PSCRN &none 
+            &none &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &none               &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
+            &none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB  &kp LC(V)             &kp HOME &kp PG_DN &kp PG_UP &kp END  &kp LC(BSPC) &none
+                                                &none &trans &kp LCTRL          &kp ENTER  &mo FNC &none
+            >;
         };
 
         // Function keys with modifiers
-            fnc_layer {
-        bindings = <
-        &none &kp C_STOP &kp C_PREV &kp C_PP &kp C_NEXT &kp C_BRI_UP      &kp F12 &kp F7 &kp F8 &kp F9 &none &none
-        &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp C_BRI_DN         &kp F11 &kp F4 &kp F5 &kp F6 &none &none
-        &none &none &none &none &none &none                               &kp F10 &kp F1 &kp F2 &kp F3 &none &none
-                                   &none &none &none              &none &none  &none
-        >;
+        fnc_layer {
+            bindings = <
+            &none &kp C_STOP &kp C_PREV &kp C_PP &kp C_NEXT &kp C_BRI_UP      &kp F12 &kp F7 &kp F8 &kp F9 &none &none
+            &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp C_BRI_DN         &kp F11 &kp F4 &kp F5 &kp F6 &none &none
+            &none &none &none &none &none &none                               &kp F10 &kp F1 &kp F2 &kp F3 &none &none
+                                       &none &none &none              &none &none  &none
+            >;
         };
 
         // num layer
-            num_layer {
-        bindings = <
-        &none &none &none &none &none &none                         &kp BE_EQL &kp BE_7 &kp BE_8 &kp BE_9 &kp BE_PLUS  &none
-        &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &none          &kp BE_ASTR &kp BE_4 &kp BE_5 &kp BE_6 &kp BE_MINS &none
-        &none &none &none &none &none &none                         &kp BE_0 &kp BE_1 &kp BE_2 &kp BE_3 &kp BE_SLSH &none
-                             &none &none &none                         &none &none &none
-        >;
+        num_layer {
+            bindings = <
+            &none &none &none &none &none &none                         &kp BE_EQL &kp BE_7 &kp BE_8 &kp BE_9 &kp BE_PLUS  &none
+            &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &none          &kp BE_ASTR &kp BE_4 &kp BE_5 &kp BE_6 &kp BE_MINS &none
+            &none &none &none &none &none &none                         &kp BE_0 &kp BE_1 &kp BE_2 &kp BE_3 &kp BE_SLSH &none
+                                 &none &none &none                         &none &none &none
+            >;
         };
+        
+        // Used to type regional accents.
+        accent_layer {
+          bindings = <
+          &none &none &none &none &kp BE_B &none                      &none &none &none &none &none &none
+          &none &kp BE_L &kp BE_A &kp BE_T &kp BE_N &kp BE_Z          &none &none &none &none &none &none
+          &none &none &none &none &kp BE_R &none                      &none &none &none &none &none &none
+                           &none &none &none                         &none &none &none
+          >;
+      };
+
+       // Used to change the keyboard's settings.
+       settings_layer {
+          bindings = <
+          &none &bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader &none
+          &none &none &none &none &none      &bt BT_SEL 1                     &bt BT_SEL 4 &none &none &none &none &none
+          &none &none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none &none
+                               &none &none &none                         &none &none &none
+          >;
+      };
     };
 };
