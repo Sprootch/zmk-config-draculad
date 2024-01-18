@@ -62,7 +62,7 @@
         // internal-left & external-right thumb keys
         combo_sym2 {
               timeout-ms = <200>;
-              key-positions = <31 33>;
+              key-positions = <39 41>;
               bindings = <&mo SYM2>;
         };
         // both left thumb keys
