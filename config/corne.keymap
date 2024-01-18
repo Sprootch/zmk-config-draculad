@@ -70,8 +70,8 @@
             sym_layer {
         bindings = <
         &none &kp FR_EXLM &kp FR_AT &kp FR_HASH &kp FR_DLR &kp FR_PERC                  &kp FR_EQL  &kp FR_GRV  &kp FR_COLN &kp FR_SCLN &kp FR_PLUS &none
-        &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp FR_CIRC                        &kp BE_ASTR &kp BE_LPRN &kp BE_LCBR &kp BE_LBRC &kp BE_MINS &none
-        &none &none &none &kp FR_BSLS &kp FR_PIPE &kp FR_AMPR                           &kp BE_TILD &kp BE_RPRN &kp BE_RCBR &kp BE_RBRC &kp BE_UNDS &none
+        &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp BE_CIRC                        &kp BE_ASTR &kp BE_LPRN &kp BE_LCBR &kp BE_LBRC &kp BE_MINS &none
+        &none &none &none &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR                           &kp BE_TILD &kp BE_RPRN &kp BE_RCBR &kp BE_RBRC &kp BE_UNDS &none
                                                        &none  &none &none       &none &none &none
         >;
         };
