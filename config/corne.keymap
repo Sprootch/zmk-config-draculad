@@ -51,7 +51,12 @@
 
     combos {
         compatible = "zmk,combos";
-    };
+		// both right thumb keys
+        combo_accent {
+            timeout-ms = <300>;
+            key-positions = <39 41>;
+            bindings = <&mo NUM>;
+        };
 
     keymap {
             compatible = "zmk,keymap";
@@ -62,7 +67,7 @@
         &none &kp BE_A &kp BE_Z &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P &none 
         &none &kp BE_Q &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp BE_M   &none  
         &none &kp BE_W &kp X &kp C &kp V &kp B           &kp N &kp BE_COMM  &kp BE_SCLN &kp BE_COLN &kp BE_QUOT &none
-             &none &mo EXT &mt LSHIFT SPACE           &kp ENTER &sl SYM &none
+             &none &mo EXT &mt LSHIFT SPACE           &kp SPACE &sl SYM &none
         >;
         };
 
@@ -80,8 +85,8 @@
         bindings = <
         &none &kp ESC  &trans &trans  &trans  &kp INSERT                    &kp BSPC  &kp HOME &kp UP &kp END &kp PSCRN &none 
         &none &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &none               &kp LEFT &kp DOWN  &kp UP  &kp RIGHT  &kp DEL &none
-        &none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp LC(V)   &kp TAB            &kp HOME &kp PG_DN &kp PG_UP &kp END  &kp LC(BSPC) &none
-                                            &none &trans &trans          &trans  &trans &none
+        &none &kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB  &kp LC(V)             &kp HOME &kp PG_DN &kp PG_UP &kp END  &kp LC(BSPC) &none
+                                            &none &trans &trans          &kp ENTER  &trans &none
         >;
         };
 
