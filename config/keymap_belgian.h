@@ -57,7 +57,7 @@
 #define BE_SCLN COMMA // ;
 #define BE_COLN DOT  // :
 #define BE_EQL  SLASH // =
-#define BE_SUP3 S(BE_SUP2) // ³
+#define BE_SUP3 LS(BE_SUP2) // ³
 #define BE_1    LS(BE_AMPR) // 1
 #define BE_2    LS(BE_EACU) // 2
 #define BE_3    LS(BE_DQUO) // 3
@@ -69,17 +69,17 @@
 #define BE_9    LS(BE_CCED) // 9
 #define BE_0    LS(BE_AGRV) // 0
 
-#define BE_DEG  S(BE_RPRN) // °
-#define BE_UNDS S(BE_MINS) // _
-#define BE_DIAE S(BE_DCIR) // ¨ (dead)
-#define BE_ASTR S(BE_DLR)  // *
-#define BE_PERC S(BE_UGRV) // %
-#define BE_PND  S(BE_MICR) // £
-#define BE_RABK S(BE_LABK) // >
-#define BE_QUES S(BE_COMM) // ?
-#define BE_DOT  S(BE_SCLN) // .
-#define BE_SLSH S(BE_COLN) // /
-#define BE_PLUS S(BE_EQL)  // +
+#define BE_DEG  LS(BE_RPRN) // °
+#define BE_UNDS LS(BE_MINS) // _
+#define BE_DIAE LS(BE_DCIR) // ¨ (dead)
+#define BE_ASTR LS(BE_DLR)  // *
+#define BE_PERC LS(BE_UGRV) // %
+#define BE_PND  LS(BE_MICR) // £
+#define BE_RABK LS(BE_LABK) // >
+#define BE_QUES LS(BE_COMM) // ?
+#define BE_DOT  LS(BE_SCLN) // .
+#define BE_SLSH LS(BE_COLN) // /
+#define BE_PLUS LS(BE_EQL)  // +
 #define BE_PIPE RA(BE_AMPR) // |
 #define BE_AT   RA(BE_EACU) // @
 #define BE_HASH RA(BE_DQUO) // #
