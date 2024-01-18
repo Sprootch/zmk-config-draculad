@@ -56,7 +56,7 @@
             timeout-ms = <300>;
             key-positions = <39 41>;
             bindings = <&mo NUM>;
-            }
+            };
         };
 
     keymap {
