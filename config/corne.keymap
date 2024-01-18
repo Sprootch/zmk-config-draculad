@@ -11,6 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keymap_french.h"
 #include "keymap_italian.h"
+#include "keymap_belgian.h"
 
 // Layer definitions
     #define BASE 0
@@ -56,11 +57,11 @@
     combos {
         compatible = "zmk,combos";
 		// both right thumb keys
-        combo_accent {
-            timeout-ms = <300>;
-            key-positions = <39 41>;
-            bindings = <&mo NUM>;
-        };
+        //combo_accent {
+        //    timeout-ms = <300>;
+        //    key-positions = <39 41>;
+        //    bindings = <&mo NUM>;
+        //};
         // TODO:
         //combo_esc {
          //           timeout-ms = <50>;
@@ -80,7 +81,6 @@
 				//		bindings = <&mo SETTINGS>;
 				//};
     };
-// Combos were here !
 
     keymap {
             compatible = "zmk,keymap";
@@ -89,8 +89,8 @@
        		default_layer {
 		bindings = <
 		&none &kp FR_A &kp FR_Z &kp E &kp R &kp T        &kp Y &kp U  &kp I     &kp O   &kp P &none	
-		&none &kp FR_Q &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp FR_M   &none	
-		&none &kp FR_W &kp X &kp C &kp V &kp B           &kp N &kp FR_COMM  &kp FR_SCLN &kp FR_COLN &kp FR_QUOT &none
+		&none &kp FR_Q &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp BE_M   &none	
+		&none &kp FR_W &kp X &kp C &kp V &kp B           &kp N &kp BE_COMM  &kp BE_SCLN &kp BE_COLN &kp BE_QUOT &none
              &none &mo EXT &mt LSHIFT SPACE           &kp ENTER &sl SYM &none
 		>;
 		};
