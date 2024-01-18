@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include "keymap_belgian.h"
+#include "keymap_french.h"
 
 // Layer definitions
     #define BASE 0
@@ -68,9 +69,9 @@
 
             sym_layer {
         bindings = <
-        &none &kp BE_EXLM &kp BE_AT &kp BE_HASH &kp BE_DLR &kp BE_PERC                  &kp BE_EQL  &kp BE_GRV  &kp BE_COLN &kp BE_SCLN &kp BE_PLUS &none
-        &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp BE_CIRC                        &kp BE_ASTR &kp BE_LPRN &kp BE_LCBR &kp BE_LBRC &kp BE_MINS &none
-        &none &none &none &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR                           &kp BE_TILD &kp BE_RPRN &kp BE_RCBR &kp BE_RBRC &kp BE_UNDS &none
+        &none &kp FR_EXLM &kp FR_AT &kp FR_HASH &kp FR_DLR &kp FR_PERC                  &kp FR_EQL  &kp FR_GRV  &kp FR_COLN &kp FR_SCLN &kp FR_PLUS &none
+        &none &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp FR_CIRC                        &kp FR_ASTR &kp FR_LPRN &kp FR_LCBR &kp FR_LBRC &kp FR_MINS &none
+        &none &none &none &kp FR_BSLS &kp FR_PIPE &kp FR_AMPR                           &kp FR_TILD &kp FR_RPRN &kp FR_RCBR &kp FR_RBRC &kp FR_UNDS &none
                                                        &none  &none &none       &none &none &none
         >;
         };
