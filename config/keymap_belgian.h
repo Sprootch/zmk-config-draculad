@@ -63,9 +63,9 @@
 #define BE_3    LS(BE_DQUO) // 3
 #define BE_4    LS(BE_QUOT) // 4
 #define BE_5    LS(BE_LPRN) // 5
-#define BE_6    LS(BE_MINS) // 6
+#define BE_6    LS(BE_SECT) // 6
 #define BE_7    LS(BE_EGRV) // 7
-#define BE_8    LS(BE_UNDS) // 8
+#define BE_8    LS(BE_EXLM) // 8
 #define BE_9    LS(BE_CCED) // 9
 #define BE_0    LS(BE_AGRV) // 0
 
@@ -93,4 +93,5 @@
 #define BE_GRV  RA(BE_MICR) // ` (dead)
 #define BE_BSLS RA(BE_LABK) // (backslash)
 #define BE_TILD RA(BE_EQL)  // ~
-
+#define BE_LESS NON_US_BSLH // <
+#define BE_GREAT LS(NON_US_BSLH) // >
