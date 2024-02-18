@@ -107,7 +107,7 @@
         bindings = <
           &kp ESC  &trans &trans  &trans  &trans                      &kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
           &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &kp RALT          &kp LEFT &kp DOWN  &kp UP  &kp RIGHT   &kp DEL
-          &kp K_UNDO  &kp K_CUT &kp K_COPY &kp TAB  &kp K_PASTE          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
+          &kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
                                        &trans &kp LCTRL    &kp ENTER  &mo FNC
       >;
       };
