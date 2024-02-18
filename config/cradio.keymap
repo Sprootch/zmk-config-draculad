@@ -4,6 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+/*
+* TODO:
+* finish ext layer
+* finish accent layer
+*/
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -101,7 +107,7 @@
         bindings = <
           &kp ESC  &trans &trans  &trans  &trans                      &kp PG_UP  &kp HOME &kp UP &kp END &kp CAPS
           &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &kp RALT          &kp LEFT &kp DOWN  &kp UP  &kp RIGHT   &kp DEL
-          &kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
+          &kp K_UNDO  &kp K_CUT &kp K_COPY &kp TAB  &kp K_PASTE          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
                                        &trans &kp LCTRL    &kp ENTER  &mo FNC
       >;
       };
@@ -119,10 +125,10 @@
       // Low frequency symbols.
       symbols_2_layer {
         bindings = <
-      &kp IT_CARET &kp IT_UNDER &kp IT_PND &kp IT_EUR &kp IT_HASH         &none &none &none &none &none
-      &kp IT_BKTK &kp IT_TILDE &kp IT_BSLH &kp IT_PIPE &kp IT_AND         &none &none &none &none &none
-      &none          &none           &kp IT_SECT &kp IT_CCED &kp IT_DEG              &none &none &none &none &none
-                                                                     &none &none           &none &none
+          &kp BE_DCIR &kp BE_UNDS &kp BE_PND &kp BE_EURO &kp BE_HASH        &none &none &none &none &none
+          &kp BE_GRV &kp BE_TILD &kp BE_BSLS &kp BE_PIPE &kp IT_AND         &none &none &none &none &none
+          &none      &none       &kp BE_SECT &kp BE_CCED &kp BE_DEG         &none &none &none &none &none
+                                              &none &none                  &none &none
       >;
       };
 
@@ -130,8 +136,8 @@
       accent_layer {
         bindings = <
           &none &none &none &kp IT_CEGR &none                         &none &none &none &none &none
-          &kp IT_AGRV &kp IT_IGRV &kp IT_OGRV &kp IT_EGRV &kp IT_EACU &none &none &none &none &none
-          &none &none &none &kp IT_UGRV &none                         &none &none &none &none &none
+          &kp BE_AGRV &kp IT_IGRV &kp IT_OGRV &kp BE_EGRV &kp BE_EACU &none &none &none &none &none
+          &none &none &none &kp BE_UGRV &none                         &none &none &none &none &none
                            &none &none                         &none &none
       >;
       };
