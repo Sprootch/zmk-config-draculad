@@ -8,6 +8,7 @@
 * TODO:
 * finish ext layer
 * finish accent layer
+* fix backslash
 */
 
 #include <behaviors.dtsi>
@@ -96,7 +97,7 @@
       sym_layer {
         bindings = <
           &kp BE_1 &kp BE_2 &kp BE_3 &kp BE_4 &kp BE_5                   &kp BE_6 &kp BE_7 &kp BE_8 &kp BE_9 &kp BE_0
-          &kp BE_LESS &kp BE_PERC &kp BE_LPRN &kp BE_LBRC &kp BE_LCBR    &kp BE_EQL &kp BE_QUES &kp BE_BSLS &kp BE_PLUS &kp BE_ASTR
+          &kp BE_LESS &kp BE_PERC &kp BE_LPRN &kp BE_LBRC &kp BE_LCBR    &kp BE_EQL &kp BE_HASH &kp BE_BSLS &kp BE_PLUS &kp BE_ASTR
           &kp BE_GREAT &kp BE_DLR &kp BE_RPRN &kp BE_RBRC &kp BE_RCBR    &kp BE_AT &kp BE_EXLM &kp BE_PIPE &kp BE_MINS &kp BE_SLSH
                                                        &mo FNC  &mo SYM2       &trans &trans
       >;
@@ -142,12 +143,15 @@
       >;
       };
 
-        // Used to change the keyboard's settings.
-             settings_layer {
-      bindings = <
+      // Used to change the keyboard's settings.
+      settings_layer {
+        bindings = <
+          &bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader
       &bootloader &none &none &bt BT_CLR &bt BT_SEL 0               &bt BT_SEL 3 &none &unstick &none &bootloader
       &none &none &none &none      &bt BT_SEL 1                     &bt BT_SEL 4 &none &none &none &none
       &none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
+          &none &none &none &none      &bt BT_SEL 1                     &bt BT_SEL 4 &none &none &none &none
+          &none &none &none &none      &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
                            &none &none                         &none &none
       >;
       };
