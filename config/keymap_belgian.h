@@ -91,7 +91,7 @@
 #define BE_RBRC RA(BE_DLR)  // ]
 #define BE_ACUT RA(BE_UGRV) // ´ (dead)
 #define BE_GRV  RA(BE_MICR) // ` (dead)
-#define BE_BSLS RA(BE_LABK) // (backslash)
+#define BE_BSLS RA(NON_US_BSLH) // (backslash)
 #define BE_TILD RA(BE_EQL)  // ~
 #define BE_LESS NON_US_BSLH // <
 #define BE_GREAT LS(NON_US_BSLH) // >
