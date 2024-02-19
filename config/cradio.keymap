@@ -49,7 +49,7 @@
 
       &caps_word {
         continue-list = <BE_UNDS BE_MINS>;
-      }
+      };
 
       behaviors {
         gresc2: quote_doublequote {
@@ -110,7 +110,7 @@
         bindings = <
           &kp ESC  &trans &trans  &trans  &trans                      &kp HOME &kp PG_DN &kp PG_UP &kp END &kp CAPS
           &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &kp RALT          &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp DEL
-          &kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
+          &kp LC(BE_Z)  &kp LC(BE_X) &kp LC(BE_C) &kp TAB   &kp LC(BE_V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
                                        &trans &kp LCTRL    &kp ENTER  &mo FNC
       >;
       };
