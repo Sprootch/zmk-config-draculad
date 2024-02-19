@@ -35,7 +35,7 @@
 };
 
 &caps_word {
-    continue-list = <BE_UNDS BE_MINS>;
+    continue-list = <BE_UNDS BE_MINS BE_M>;
 };
 
 / {
