@@ -34,6 +34,10 @@
     ignore-modifiers;
 };
 
+&caps_word {
+    continue-list = <BE_UNDS BE_MINS>;
+};
+
 / {
       macros {
             // sometimes my device thinks a modifier is being held down
@@ -45,10 +49,6 @@
                bindings
                   = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
             };
-      };
-
-      &caps_word {
-        continue-list = <BE_UNDS BE_MINS>;
       };
 
       behaviors {
