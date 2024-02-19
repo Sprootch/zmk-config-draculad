@@ -47,6 +47,10 @@
             };
       };
 
+      &caps_word {
+        continue-list = <BE_UNDS BE_MINS>;
+      }
+
       behaviors {
         gresc2: quote_doublequote {
             compatible = "zmk,behavior-mod-morph";
@@ -125,7 +129,7 @@
       symbols_2_layer {
         bindings = <
           &kp BE_DCIR &kp BE_UNDS &kp BE_PND &kp BE_EURO &kp BE_HASH        &none &none &none &none &none
-          &kp BE_GRV &kp BE_TILD &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR         &none &none &none &none &none
+          &kp BE_GRV &kp BE_TILD &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR        &none &none &none &none &none
           &none      &none       &kp BE_SECT &kp BE_CCED &kp BE_DEG         &none &none &none &none &none
                                               &none &none                  &none &none
       >;
