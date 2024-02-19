@@ -139,8 +139,8 @@
       accent_layer {
         bindings = <
           &none &none &none &none &none                         &none &none &none &none &none
-          &kp BE_AGRV &kp BE_UGRV &kp BE_CCED &kp BE_EACU &kp BE_GRV &none &none &none &none &none
-          &none &none &none &none &none                         &none &none &none &none &none
+          &kp BE_AGRV &kp BE_UGRV &kp BE_CCED &kp BE_EACU &kp BE_EGRV &none &none &none &none &none
+          &none &none &none &kp BE_DCIR &none                         &none &none &none &none &none
                            &none &none                         &none &none
       >;
       };
