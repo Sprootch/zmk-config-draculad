@@ -7,7 +7,7 @@
 /*
 * TODO:
 * finish accent layer
-* underscore plus près ?
+* repenser touches F5, F9, F10, F11, F12
 */
 
 #include <behaviors.dtsi>
@@ -108,7 +108,7 @@
       // Main modifiers and arrow keys
       ext_layer {
         bindings = <
-          &kp ESC  &trans &trans  &trans  &trans                      &kp HOME &kp PG_DN &kp PG_UP &kp END &kp CAPS
+          &kp ESC  &trans &trans  &trans  &trans                      &kp HOME &kp PG_DN &kp PG_UP &kp END &caps_word
           &sk LGUI &sk LALT  &sk LCTRL  &sk LSHIFT  &kp RALT          &kp LEFT &kp DOWN  &kp UP  &kp RIGHT &kp DEL
           &kp LC(BE_Z)  &kp LC(BE_X) &kp LC(BE_C) &kp TAB   &kp LC(BE_V)          &kp LC(BSPC) &kp BSPC &trans &trans  &trans
                                        &trans &kp LCTRL    &kp ENTER  &mo FNC
@@ -120,7 +120,7 @@
         bindings = <
           &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
           &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
-          &none &none &none &none &none                       &none &kp K_APP &caps_word &none &none
+          &none &none &none &none &none                       &none &kp K_APP &none &none &none
                                  &none &none              &none &none
       >;
       };
