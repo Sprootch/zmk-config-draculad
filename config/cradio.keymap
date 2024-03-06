@@ -118,9 +118,9 @@
       // Function keys with modifiers
       fnc_layer {
         bindings = <
-          &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-          &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
-          &none &none &none &none &none                       &none &kp K_APP &none &none &none
+          &kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &none
+          &sk LGUI &sk LALT &sk LCTRL &sk LSHIFT &kp RALT     &none &kp F10 &kp F11 &kp F12 &none
+          &none &none &none &none &none                       &none &kp K_APP &kp PRINTSCREEN &none &none
                                  &none &none              &none &none
       >;
       };
