@@ -43,6 +43,14 @@
                bindings
                   = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
             };
+            
+            // Send circumflex ^ directly (tap dead key twice)
+            circumflex: circumflex {
+                   compatible = "zmk,behavior-macro";
+                   #binding-cells = <0>;
+                   bindings
+                       = <&kp BE_DCIR>, <&kp BE_DCIR>;
+            };
       };
 
       behaviors {
@@ -124,7 +132,7 @@
         bindings = <
           &kp BE_DEG  &kp BE_UNDS &kp BE_PND  &kp BE_EURO &kp BE_HASH       &none &none &none &none &none
           &kp BE_GRV  &kp BE_TILD &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR       &none &none &none &none &none
-          &kp BE_CCED &kp BE_SECT &kp BE_DCIR &kp BE_DLR  &none             &none &none &none &none &none
+          &kp BE_CCED &kp BE_SECT &circumflex &kp BE_DLR  &none             &none &none &none &none &none
                                                 &none &none                  &none &none
       >;
       };
@@ -132,10 +140,10 @@
       // Used to type regional accents.
       accent_layer {
         bindings = <
-          &none &none &none &none &none                         &none &none &none &none &none
-          &kp BE_AGRV &kp BE_UGRV &kp BE_CCED &kp BE_EACU &kp BE_EGRV &none &none &none &none &none
-          &none &none &kp BE_DIAE &kp BE_DCIR &none                         &none &none &none &none &none
-                           &none &none                         &none &none
+          &none &none &none &none &none                                 &none &none &none &none &none
+          &kp BE_AGRV &kp BE_UGRV &kp BE_CCED &kp BE_EACU &kp BE_EGRV   &none &none &none &none &none
+          &none &none &kp BE_DIAE &kp BE_DCIR &none                     &none &none &none &none &none
+                                        &none &none                         &none &none
       >;
       };
 
@@ -143,7 +151,7 @@
       settings_layer {
         bindings = <
           &bootloader &none &none &bt BT_CLR &bt BT_SEL 0    &bt BT_SEL 3 &none &unstick &none &bootloader
-          &none &none &none &bt BT_CLR_ALL &bt BT_SEL 1         &bt BT_SEL 4 &bt BT_PRV &bt BT_NXT &none &none
+          &none &none &none &bt BT_CLR_ALL &bt BT_SEL 1      &bt BT_SEL 4 &bt BT_PRV &bt BT_NXT &none &none
           &none &none &none &none &bt BT_SEL 2               &bt BT_SEL 5 &none &none &none &none
                            &none &none                         &none &none
       >;
