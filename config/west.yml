@@ -1,13 +1,31 @@
 manifest:
   remotes:
+    # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+      # bravekarma
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
+      # kyek / duckyb
+    - name: duckyb
+      url-base: https://github.com/duckyb
+      # If you don't use animation delete from Here
+      # ulounge
+    - name: ulounge
+      url-base: https://github.com/ulounge
+      # To Here
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+    - name: urchin-zmk-module
+      remote: duckyb
+      revision: main
+      # If you don't use animation delete from Here
+    - name: nice-view-mod
+      remote: ulounge
+      revision: main
+      # To Here                      
   self:
-    path: config
+    path: config 
