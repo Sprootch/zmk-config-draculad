@@ -30,7 +30,7 @@ manifest:
     - name: zephyr
       remote: zephyrproject-rtos
       revision: v3.5-branch
-      import: app/west.yml
+      import: west.yml
 
       # If you don't use animation delete from Here
     - name: nice-view-mod
