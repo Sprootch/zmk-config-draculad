@@ -4,8 +4,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
      # Zephyr
-    - name: zephyrproject-rtos
-      url-base: https://github.com/zephyrproject-rtos
+#    - name: zephyrproject-rtos
+#      url-base: https://github.com/zephyrproject-rtos
       # bravekarma
     - name: caksoylar
       url-base: https://github.com/caksoylar
@@ -20,17 +20,17 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v3.7.0
       import: app/west.yml
 
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
 
-    - name: zephyr
-      remote: zephyrproject-rtos
-      revision: v3.5-branch
-      import: west.yml
+#    - name: zephyr
+#      remote: zephyrproject-rtos
+#      revision: v3.5-branch
+#      import: west.yml
 
       # If you don't use animation delete from Here
     - name: nice-view-mod
