@@ -88,7 +88,7 @@
 
         Show_layer_4 {
           timeout-ms = <100>;
-          bindings = <&kp RALT(RCTRL(N4))>;
+          bindings = <&kp RA(RC(N4))>;
           key-positions = <17>;
           layers = <SYM2>;
           slow-release;
