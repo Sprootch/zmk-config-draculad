@@ -3,20 +3,17 @@ manifest:
     # zmk official
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-     # Zephyr
-#    - name: zephyrproject-rtos
-#      url-base: https://github.com/zephyrproject-rtos
-      # bravekarma
+    # bravekarma
     - name: caksoylar
       url-base: https://github.com/caksoylar
-      # kyek / duckyb
+    # kyek / duckyb
     - name: duckyb
       url-base: https://github.com/duckyb
-      # If you don't use animation delete from Here
-      # ulounge
+    # If you don't use animation delete from Here
+    # ulounge
     - name: ulounge
       url-base: https://github.com/ulounge
-      # To Here
+    # To Here
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -26,11 +23,6 @@ manifest:
     - name: urchin-zmk-module
       remote: duckyb
       revision: main
-
-#    - name: zephyr
-#      remote: zephyrproject-rtos
-#      revision: v3.5-branch
-#      import: west.yml
 
       # If you don't use animation delete from Here
     - name: nice-view-mod

@@ -151,7 +151,7 @@
         bindings = <
           &kp BE_DEG  &kp BE_UNDS &kp BE_PND  &kp BE_EURO &kp BE_HASH       &none &none &none &none &none
           &kp BE_GRV  &kp BE_TILD &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR       &none &none &none &none &none
-          &none       &kp BE_SECT &circumflex &kp BE_DLR  &kp BE_MICR       &none &none &none &none &none
+          &none       &kp BE_SECT &circumflex &kp BE_DLR  &none             &none &none &none &none &none
                                                 &none &none                  &none &none
       >;
       };
