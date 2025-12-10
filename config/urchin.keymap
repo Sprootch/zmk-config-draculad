@@ -86,10 +86,18 @@
           bindings = <&mo SETTINGS>;
         };
 
+        Show_layer_2 {
+          timeout-ms = <100>;
+          bindings = <&kp RA(RC(N2))>;
+          key-positions = <29>;
+          layers = <SYM>;
+          slow-release;
+        };
+
         Show_layer_4 {
           timeout-ms = <100>;
           bindings = <&kp RA(RC(N4))>;
-          key-positions = <17>;
+          key-positions = <16>;
           layers = <SYM2>;
           slow-release;
         };
@@ -113,7 +121,7 @@
         bindings = <
           &kp BE_1 &kp BE_2 &kp BE_3 &kp BE_4 &kp BE_5                   &kp BE_6 &kp BE_7 &kp BE_8 &kp BE_9 &kp BE_0
           &kp BE_LESS &kp BE_PERC &kp BE_LPRN &kp BE_LBRC &kp BE_LCBR    &kp BE_HASH &kp BE_EQL &kp BE_BSLS &kp BE_PLUS &kp BE_ASTR
-          &kp BE_GREAT &kp BE_DLR &kp BE_RPRN &kp BE_RBRC &kp BE_RCBR    &kp BE_AT &kp BE_EXLM &kp BE_UNDS &kp BE_MINS &kp BE_PIPE
+          &kp BE_GREAT &kp BE_DLR &kp BE_RPRN &kp BE_RBRC &kp BE_RCBR    &kp BE_AT &kp BE_EXLM &kp BE_UNDS &kp BE_MINS &none
                                                        &mo FNC  &mo SYM2       &trans &trans
       >;
       };
@@ -143,7 +151,7 @@
         bindings = <
           &kp BE_DEG  &kp BE_UNDS &kp BE_PND  &kp BE_EURO &kp BE_HASH       &none &none &none &none &none
           &kp BE_GRV  &kp BE_TILD &kp BE_BSLS &kp BE_PIPE &kp BE_AMPR       &none &none &none &none &none
-          &none       &kp BE_SECT &circumflex &kp BE_DLR  &none             &none &none &none &none &none
+          &none       &kp BE_SECT &circumflex &kp BE_DLR  &kp BE_MICR       &none &none &none &none &none
                                                 &none &none                  &none &none
       >;
       };
