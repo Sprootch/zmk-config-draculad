@@ -86,13 +86,13 @@
           bindings = <&mo SETTINGS>;
         };
 
-        Show_layer_4 {
+        /*Show_layer_4 {
           timeout-ms = <100>;
           bindings = <&kp RALT(RCTRL(N4))>;
           key-positions = <17>;
           layers = <SYM2>;
           slow-release;
-        };
+        };*/
       };
 
     keymap {
