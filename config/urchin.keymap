@@ -43,7 +43,7 @@
                bindings
                   = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
             };
-            
+
             // Send circumflex ^ directly (tap dead key twice)
             circumflex: circumflex {
                    compatible = "zmk,behavior-macro";
@@ -64,28 +64,39 @@
 
       combos {
         compatible = "zmk,combos";
+
         // both right thumb keys
         combo_accent {
             timeout-ms = <300>;
             key-positions = <32 33>;
             bindings = <&mo ACCENT>;
         };
+
         // internal-left & external-right thumb keys
         combo_sym2 {
               timeout-ms = <200>;
               key-positions = <31 33>;
               bindings = <&mo SYM2>;
         };
+
         // both left thumb keys
         combo_settings {
           timeout-ms = <300>;
           key-positions = <30 31>;
           bindings = <&mo SETTINGS>;
         };
+
+        Show_layer_4 {
+          timeout-ms = <100>;
+          bindings = <&kp RALT(RCTRL(N4))>;
+          key-positions = <17>;
+          layers = <SYM2>;
+          slow-release;
+        };
       };
 
     keymap {
-            compatible = "zmk,keymap";
+      compatible = "zmk,keymap";
 
       // Base alpha layer
       default_layer {
@@ -140,7 +151,7 @@
       // Used to type regional accents.
       accent_layer {
         bindings = <
-          &none &none &none &none &none                                 &none &bt BT_CLR &none &none &bootloader
+          &kp BE_AGRV &none &none &none &none                           &none &bt BT_CLR &none &none &bootloader
           &kp BE_AGRV &kp BE_UGRV &kp BE_CCED &kp BE_EACU &kp BE_EGRV   &none &bt BT_CLR_ALL &none &none &none
           &none &none &kp BE_DCIR &kp BE_DIAE &none                     &none &none &none &none &soft_off
                                         &none &none                         &none &none
