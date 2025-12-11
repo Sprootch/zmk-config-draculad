@@ -89,7 +89,7 @@
         Show_layer_2 {
           timeout-ms = <100>;
           bindings = <&kp RA(RC(N2))>;
-          key-positions = <29>;
+          key-positions = <30 31>;
           layers = <SYM>;
           slow-release;
         };
