@@ -1,0 +1,254 @@
+layout: {zmk_keyboard: urchin}
+layers:
+  default:
+  - A
+  - Z
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - Q
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - M
+  - W
+  - X
+  - C
+  - V
+  - B
+  - N
+  - '? ,'
+  - '. ;'
+  - '/ :'
+  - '" '''
+  - ext
+  - {t: ESC, h: SHIFT}
+  - SPACE
+  - {t: sym, h: sticky}
+  sym:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 0
+  - '<'
+  - '%'
+  - '('
+  - '['
+  - '{'
+  - '#'
+  - '='
+  - '\'
+  - '+'
+  - '*'
+  - '>'
+  - '$'
+  - ')'
+  - ']'
+  - '}'
+  - '@'
+  - '!'
+  - '_'
+  - '-'
+  - '|'
+  - 'HINT'
+  - 'HINT'
+  - ''
+  - {type: held}
+  ext:
+  - ESC
+  - 'ALT TAB'
+  - 'CTRL TAB'
+  - ''
+  - ''
+  - HOME
+  - PG DOWN
+  - PG UP
+  - END
+  - 'CAPS LOCK'
+  - {t: GUI }
+  - {t: ALT}
+  - {t: CTRL }
+  - {t: SHIFT }
+  - RALT
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - DEL
+  - UNDO
+  - CUT
+  - COPY
+  - TAB
+  - PASTE
+  - CTRL+BSPC
+  - BSPC
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - CTRL
+  - ENTER
+  - fnc
+  fnc:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - ''
+  - {t: GUI }
+  - {t: ALT }
+  - {t: CTRL }
+  - {t: SHIFT }
+  - RALT
+  - ''
+  - F10
+  - F11
+  - F12
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - APP
+  - PRTSCR
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  symbols_2:
+  - '°'
+  - '_'
+  - '£'
+  - '€'
+  - '#'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '`'
+  - '~'
+  - '\'
+  - '|'
+  - '&'
+  - ''
+  - 'HINT'
+  - ''
+  - ''
+  - ''
+  - ''
+  - '§'
+  - '^'
+  - '$'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - {type: held}
+  accent:
+  - 'à'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'BT CLR'
+  - ''
+  - ''
+  - 'bootloader'
+  - 'à'
+  - 'ù'
+  - 'ç'
+  - 'é'
+  - 'è'
+  - ''
+  - 'BT CLR ALL'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '^'
+  - '¨'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'OFF'
+  - ''
+  - ''
+  - {type: held}
+  - {type: held}
+  settings:
+  - 'bootloader'
+  - ''
+  - ''
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '3'}
+  - ''
+  - '&unstick'
+  - ''
+  - 'bootloader'
+  - ''
+  - ''
+  - ''
+  - BT CLR ALL
+  - {t: BT, h: '1'}
+  - {t: BT, h: '4'}
+  - BT PRV
+  - BT NXT
+  - ''
+  - ''
+  - 'OFF'
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '2'}
+  - {t: BT, h: '5'}
+  - ''
+  - ''
+  - ''
+  - 'OFF'
+  - {type: held}
+  - {type: held}
+  - ''
+  - ''
+combos:
+- p: [32, 33]
+  k: accent
+- p: [31, 33]
+  k: symbols_2
+- p: [30, 31]
+  k: settings
